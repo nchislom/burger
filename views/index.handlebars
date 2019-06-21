@@ -1,6 +1,16 @@
 <h1>Eat da' Burger!</h1>
 
-<h2>Eat da' Burger!</h2>
+<h2>Order Up!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+<hr>
+<h2>Devoured Burgers</h2>
 
 <ul>
   {{#each burgers}}
@@ -10,16 +20,7 @@
   {{/each}}
 </ul>
 
-<h2>Devoured Burgers</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
+<hr>
 <h2>Add a Burger</h2>
 <form class="create-form">
 
